@@ -60,3 +60,25 @@ If you want to learn more about building native executables, please consult <htt
 Easily start your REST Web Services
 
 [Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+
+## Own notes
+```shell script
+sdk install quarkus
+```
+Can also install using homebrew
+```shell script
+quarkus create && cd code-with-quarkus
+```
+start up your app
+```shell script
+quarkus dev
+```
+Your web app is now running at http://localhost:8080
+Modify your code and refresh your web browser to see change
+DEV UI: http://localhost:8080/q/dev
+
+Continue testing, updating your code and quarkus will inform you immediately affected test is failing
+
+Live configuration update
+
+
