@@ -96,3 +96,9 @@ quarkus extension add rest-client-jackson
 ```
 We only need to provide an interface, Quarkus will provide the implementation of the service using the RegisterRestClient annotation
 Note that you have to use base url via configuration though
+
+Adding resilience features
+
+```shell script
+quarkus extension add quarkus-smallrye-fault-tolerance
+```
