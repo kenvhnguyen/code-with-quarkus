@@ -74,11 +74,13 @@ start up your app
 quarkus dev
 ```
 Your web app is now running at http://localhost:8080
+
 Modify your code and refresh your web browser to see change
-DEV UI: http://localhost:8080/q/dev
+
+DEV UI is nice feature of quarkus: http://localhost:8080/q/dev
 
 Continue testing, updating your code and quarkus will inform you immediately affected test is failing
 
-Live configuration update
+Live configuration update via DEV UI > Configuration
 
 
