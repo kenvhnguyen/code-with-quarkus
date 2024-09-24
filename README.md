@@ -102,3 +102,11 @@ Adding resilience features
 ```shell script
 quarkus extension add quarkus-smallrye-fault-tolerance
 ```
+Adding api health check
+
+```shell script
+quarkus extension add quarkus-smallrye-health
+```
+```shell script
+curl http://localhost:8080/q/health
+```
