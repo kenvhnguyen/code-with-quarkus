@@ -62,6 +62,7 @@ Easily start your REST Web Services
 [Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
 
 ## Own notes
+### Hello World and some nice features
 ```shell script
 sdk install quarkus
 ```
@@ -87,5 +88,11 @@ Add dependencies via Quarkus CLI
 ```shell script
 quarkus extension add rest-jackson jdbc-h2 hibernate-orm-panache smallrye-openapi
 ```
+### Cloud Native Development
 
-
+Consume another REST API:
+```shell script
+quarkus extension add rest-client-jackson
+```
+We only need to provide an interface, Quarkus will provide the implementation of the service using the RegisterRestClient annotation
+Note that you have to use base url via configuration though
