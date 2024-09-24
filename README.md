@@ -83,4 +83,9 @@ Continue testing, updating your code and quarkus will inform you immediately aff
 
 Live configuration update via DEV UI > Configuration
 
+Add dependencies via Quarkus CLI
+```shell script
+quarkus extension add rest-jackson jdbc-h2 hibernate-orm-panache smallrye-openapi
+```
+
 
