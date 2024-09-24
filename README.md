@@ -110,3 +110,10 @@ quarkus extension add quarkus-smallrye-health
 ```shell script
 curl http://localhost:8080/q/health
 ```
+Implement my own health probes
+```shell script
+curl http://localhost:8080/q/health/ready -v
+```
+```shell script
+curl http://localhost:8080/q/health/live -v
+```
