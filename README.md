@@ -117,3 +117,10 @@ curl http://localhost:8080/q/health/ready -v
 ```shell script
 curl http://localhost:8080/q/health/live -v
 ```
+Adding metrics using mircometer (same facade like slf4j for logging but for metrics, a common ground for metrics systems)
+```shell script
+quarkus extension add quarkus-micrometer-registry-prometheus
+```
+```shell script
+curl http://localhost:8080/q/metrics
+```
