@@ -124,3 +124,8 @@ quarkus extension add quarkus-micrometer-registry-prometheus
 ```shell script
 curl http://localhost:8080/q/metrics
 ```
+Implement my own metrics
+```shel script
+curl http://localhost:8080/q/metrics|grep "time.now"
+```
+Note that to see the metrics, you need to perform some requests ;)

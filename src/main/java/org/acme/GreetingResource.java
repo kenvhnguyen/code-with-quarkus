@@ -1,5 +1,7 @@
 package org.acme;
 
+import io.micrometer.core.annotation.Counted;
+import io.micrometer.core.instrument.MeterRegistry;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -12,9 +14,13 @@ import org.eclipse.microprofile.faulttolerance.Retry;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import java.time.temporal.ChronoUnit;
+import java.util.Calendar;
+import java.util.TimeZone;
 
 @Path("/hello")
 public class GreetingResource {
+
+    private final MeterRegistry registry;
 
     @ConfigProperty(name = "quarkus.greeting")
     String greeting;
@@ -25,6 +31,16 @@ public class GreetingResource {
     @Inject
     ErrorService error;
 
+    public GreetingResource(MeterRegistry registry) {
+        this.registry = registry;
+        registry.gauge("offsetFromUTC", this, GreetingResource::offSetFromUTC);
+    }
+
+    int offSetFromUTC() {
+        return TimeZone.getDefault().getOffset(Calendar.ZONE_OFFSET);
+    }
+
+    @Counted(value = "time.now")
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
