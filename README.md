@@ -129,3 +129,6 @@ Implement my own metrics
 curl http://localhost:8080/q/metrics|grep "time.now"
 ```
 Note that to see the metrics, you need to perform some requests ;)
+
+# Try out TMDB API
+https://developer.themoviedb.org/reference/account-watchlist-movies
