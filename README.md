@@ -132,3 +132,12 @@ Note that to see the metrics, you need to perform some requests ;)
 
 # Try out TMDB API
 https://developer.themoviedb.org/reference/account-watchlist-movies
+
+# Try out Tiingo API
+[Passing token](https://www.tiingo.com/documentation/general/connecting)
+[End Of Day](https://www.tiingo.com/documentation/end-of-day)
+Reference [Quarkus REST client](https://quarkus.io/guides/rest-client#path-parameters)
+```
+curl http:http://localhost:8080/stocks/aapl/prices?startDate=2023-6-23&endDate=2023&endDate=2023-7-23
+```
+should display the closing price of 23 jul 2023 (actually 21 jul due to a weekend)
