@@ -16,5 +16,4 @@ class GreetingResourceTest {
              .statusCode(200)
              .body(containsString("Hello from Quarkus REST. It is now: "));
     }
-
 }

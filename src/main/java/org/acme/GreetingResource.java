@@ -45,7 +45,7 @@ public class GreetingResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
         var worldClock = service.getNow("Europe/Amsterdam");
-        return greeting + worldClock.dateTime + " in " + worldClock.timeZone;
+        return String.format(greeting, worldClock.dateTime, worldClock.timeZone);
     }
 
     @Path("/error")
