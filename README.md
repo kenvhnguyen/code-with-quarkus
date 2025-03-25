@@ -1,8 +1,20 @@
 # code-with-quarkus
 
+
+
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
+
+But in short:
+
+Install quarkus:
+
+```sdk install quarkus```
+
+Create Getting Started Application
+
+```quarkus create && cd code-with-quarkus```
 
 ## Running the application in dev mode
 
@@ -141,3 +153,17 @@ Reference [Quarkus REST client](https://quarkus.io/guides/rest-client#path-param
 curl http:http://localhost:8080/stocks/aapl/prices?startDate=2023-6-23&endDate=2023&endDate=2023-7-23
 ```
 should display the closing price of 23 jul 2023 (actually 21 jul due to a weekend)
+
+# Benefit
+
+Quarkus applications start really fast, either on GraalVM (having AOT) as a natively compile library or our de facto JVM, OpenJDK (JIT).
+
+Quarkus applications also have a really low memory footprint and Memory footprint is money in the cloud
+
+Tradeoff: throughput is a bit less compared to traditional stack (3000 TPS)
+
+Live Coding
+
+Continuous testing
+
+Zero configuration with DevServices
