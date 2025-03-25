@@ -11,9 +11,9 @@ class GreetingResourceTest {
     @Test
     void testHelloEndpoint() {
         given()
-          .when().get("/hello")
-          .then()
-             .statusCode(200)
-             .body(containsString("Hello from Quarkus REST. It is now: "));
+                .when().get("/hello")
+                .then()
+                .statusCode(200)
+                .body(containsString("Hello from Quarkus REST. It is now: "));
     }
 }

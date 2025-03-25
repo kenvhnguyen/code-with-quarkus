@@ -167,3 +167,10 @@ Live Coding
 Continuous testing
 
 Zero configuration with DevServices
+
+A counter candidate to Spring Boot, migration to Quarkus is easy
+
+# Compared to Spring Boot
+
+We can store both properties that are relevant at build time and especially runtime
+

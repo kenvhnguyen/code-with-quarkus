@@ -30,7 +30,7 @@
     </dependencyManagement>
 
     <dependencies>
-        <dependency>
+        <dependency> <!--Quarkus own implementation of the Jakarta EE CDI specs-->
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-arc</artifactId>
         </dependency>
