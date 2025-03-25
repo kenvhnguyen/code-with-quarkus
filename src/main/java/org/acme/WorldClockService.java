@@ -2,13 +2,12 @@ package org.acme;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
+import jakarta.ws.rs.QueryParam;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
-@Path("/api/timezone/Europe/")
+@Path("/api/time/current/zone")
 @RegisterRestClient(configKey = "work-clock-service")
 public interface WorldClockService {
-    @Path("{city}")
     @GET
-    WorkClock getNow(@PathParam("city") String city);
+    WorkClock getNow(@QueryParam("timeZone") String timeZone);
 }

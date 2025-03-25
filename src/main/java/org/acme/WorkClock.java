@@ -1,5 +1,6 @@
 package org.acme;
 
 public class WorkClock {
-    public String datetime;
+    public String dateTime;
+    public String timeZone;
 }
